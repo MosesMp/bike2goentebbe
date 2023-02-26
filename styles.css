@@ -176,62 +176,31 @@ font-size: 1rem;
   }
 }
 
-          /*trips*/
-          .slider-gallery {
-  max-width: 1200px;
-  margin: 0 auto;
+     .slideshow-container {
   position: relative;
-}
-
-.slider {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
   height: 400px;
 }
 
-.slider img {
-  flex-shrink: 0;
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  scroll-snap-align: start;
 }
 
-.slider-nav {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.slider-prev,
-.slider-next {
-  background: none;
-  border: none;
-  font-size: 48px;
-  color: #fff;
-  cursor: pointer;
+.active {
+  display: block;
 }
-
-.slider-prev:hover,
-.slider-next:hover {
-  color: #ccc;
-}
-
-@media (max-width: 768px) {
-  .slider {
-    height: 200px;
-  }
-  
-  .slider img {
-    height: 100%;
-  }
-}
+     
 .bikehire {
   max-width: 1200px;
   margin: 0 auto;
@@ -380,5 +349,4 @@ footer {
     width: 100%;
   }
 }
-
 
