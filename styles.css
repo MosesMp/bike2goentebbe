@@ -12,18 +12,7 @@
             font-family: "Open Sans", sans-serif;
             
         }
-
-        .menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #099aed;
-            color: #fff;
-            padding: 15px;
-            font-size: 18px;
-        }
-
-        .logo {
+.logo {
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -40,6 +29,17 @@
             font-weight: bold;
         }
 
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #099aed;
+            color: #fff;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        
         .menu-toggle {
             display: none;
         }
@@ -348,5 +348,25 @@ footer {
   .review-div {
     width: 100%;
   }
+}
+
+#home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #005eff;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#home-button:hover {
+  background-color: #0056b3;
 }
 
