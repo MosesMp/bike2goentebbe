@@ -6,38 +6,41 @@
             menuItems.classList.toggle("show");
         });
 
-
-        // Get all reserve buttons
+// Select all reserve buttons
 const reserveButtons = document.querySelectorAll('.reserve-button');
 
-// Add click event listener to each button
+// Loop through each button and add a click event listener
 reserveButtons.forEach(button => {
   button.addEventListener('click', () => {
     // Get the trip name from the data-trip attribute
-    const tripName = button.dataset.trip;
-
-    // Create the email body with the trip name
-    const emailBody = `I would like to reserve the ${tripName} trip.`;
-
-    // Open the email window
-    window.location.href = `mailto:info@bike2goentebbe.com?subject=Reservation for ${tripName}&body=${emailBody}`;
+    const tripName = button.getAttribute('data-trip');
+    // Send an email with the trip name in the subject line
+    const mailtoLink = `mailto:info@bike2goentebbe.com?subject=Reservation Request - ${tripName}`;
+    window.location.href = mailtoLink;
   });
 });
 
 
-const slider = document.querySelector('.slider');
-let isDragging = false;
-let startPos = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
 
-// Check if there are problems with the mobile version of the site
-const hasMobileIssues = true; // Set this to true if there are issues with the mobile version of the site
 
-// Display an alert message if there are issues with the mobile version of the site
-if (hasMobileIssues) {
-  alert('We are experiencing problems on our site. We are still setting up the site, so please use the web version if you encounter any issues. Alternatively, you can book with us through Trip Advisor. We apologize for any inconvenience.');
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 
-window.onload = function() {
-  alert("Dear valued customers, \n\nWe are currently experiencing some technical issues with our website as we are still under construction. We apologize for any inconvenience this may cause. To ensure that you can still book your trip with us, we recommend using our desktop version or proceeding with bookings through Trip Advisor. \n\nOur team is working diligently to resolve the issue as quickly as possible, and we appreciate your patience and understanding during this time. \n\nThank you for choosing our service, and we look forward to providing you with an exceptional travel experience. \n\nBest regards, \n[Bike2goEntebbe]");
+
+
+
