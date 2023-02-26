@@ -1,0 +1,383 @@
+/* Responsive Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: lightblue;
+            font-family: "Open Sans", sans-serif;
+            
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #099aed;
+            color: #fff;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .slogan {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 20px;
+                color: #fff;
+                background-color: #333;
+                border: none;
+            }
+
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .menu-items.show {
+                display: flex;
+            }
+
+            .menu a {
+                display: block;
+                padding: 10px 20px;
+            }
+        }
+
+
+ /*about us*/
+ .about-section {
+text-align: justify;
+padding: 20px;
+margin: 30px auto;
+
+}
+
+.about-section h2 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+.about-section p {
+font-size: 1.2rem;
+line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+.about-section {
+padding: 10px;
+}
+
+.about-section h2 {
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+
+.about-section p {
+font-size: 1rem;
+}
+}
+
+  
+
+
+        /*trips*/
+        .trips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.trip-box {
+  flex-basis: calc(50% - 1em);
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.trip-box img {
+  max-width: 100%;
+}
+
+.trip-box h2 {
+  margin: 1em 0 0.5em;
+  font-size: 1.5em;
+}
+
+.trip-box p {
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+.reserve-button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .trip-box {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+          /*trips*/
+          .slider-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  height: 400px;
+}
+
+.slider img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.slider-prev,
+.slider-next {
+  background: none;
+  border: none;
+  font-size: 48px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 200px;
+  }
+  
+  .slider img {
+    height: 100%;
+  }
+}
+.bikehire {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.bikehire img {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.bikehire p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+max-width: 1200px;
+            margin: 0 auto;
+}
+.contact-us {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-us img {
+  display: inline-block;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.contact-us .social-icons {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-us .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact-us .social-icons li:last-child {
+  margin-right: 0;
+}
+
+.contact-us .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #333333;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-us .social-icons a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media-icons i {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .social-media-icons {
+    margin-top: 20px;
+  }
+}
+
+.review-div {
+  
+  padding: 10px;
+ max-width: 100%;           
+  text-align: block;
+  font-family: 'Staatliches', cursive;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.review-div h3 {
+  font-size: 1.2rem;
+}
+
+.review-div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-div li {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .review-div {
+    width: 100%;
+  }
+}
+
