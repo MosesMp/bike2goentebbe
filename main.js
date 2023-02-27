@@ -62,3 +62,10 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+window.addEventListener('load', function() {
+  const loader = document.querySelector('.loader');
+  const pageContent = document.querySelector('.page-content');
+  loader.parentElement.removeChild(loader);
+  pageContent.classList.add('show');
+});

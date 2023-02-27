@@ -8,24 +8,26 @@
             font-family: Arial, sans-serif;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: lightblue;
-            font-family: "Open Sans", sans-serif;
+            font-family: 'Staatliches', cursive;
+font-family: 'Ubuntu', sans-serif;
             
         }
-.logo {
+      .logo {
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         .logo img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             margin-right: 10px;
         }
 
         .slogan {
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: bold;
         }
 
@@ -37,6 +39,8 @@
             color: #fff;
             padding: 20px;
             font-size: 18px;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         
@@ -98,6 +102,7 @@
 text-align: justify;
 padding: 20px;
 margin: 30px auto;
+
 
 }
 
@@ -370,3 +375,23 @@ footer {
   background-color: #0056b3;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.page-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-content.show {
+  opacity: 1;
+  visibility: visible;
+}
