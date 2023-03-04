@@ -13,6 +13,7 @@
            
             
         }
+        
       .logo {
             display: flex;
             align-items: center;
@@ -22,8 +23,8 @@
         }
 
         .logo img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             margin-right: 10px;
         }
 
@@ -38,7 +39,7 @@
             align-items: center;
             background-color:#7B8C3B;
             color: #fff;
-            padding: 20px;
+            padding: 10px;
             font-size: 18px;
             font-family: 'Staatliches', cursive;
             font-family: 'Ubuntu', sans-serif;
