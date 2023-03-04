@@ -1,84 +1,344 @@
- // Menu toggle
- const menuToggle = document.querySelector(".menu-toggle");
- const menuItems = document.querySelector(".menu-items");
+/* Responsive Styling */
+        * {
+            box-sizing: border-box;
+        }
 
- menuToggle.addEventListener("click", () => {
-     menuItems.classList.toggle("show");
- });
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
+           
+            
+        }
+      .logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
 
-// Select all reserve buttons
-const reserveButtons = document.querySelectorAll('.reserve-button');
+        .logo img {
+            width: 120px;
+            height: 120px;
+            margin-right: 10px;
+        }
 
-// Loop through each button and add a click event listener
-reserveButtons.forEach(button => {
-button.addEventListener('click', () => {
-// Get the trip name from the data-trip attribute
-const tripName = button.getAttribute('data-trip');
-// Send an email with the trip name in the subject line
-const mailtoLink = `mailto:info@bike2goentebbe.com?subject=Reservation Request - ${tripName}`;
-window.location.href = mailtoLink;
-});
-});
+        .slogan {
+            font-size: 1em;
+            font-weight: bold;
+        }
 
-
-
-
-
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-let i;
-const slides = document.getElementsByClassName("slide");
-for (i = 0; i < slides.length; i++) {
-slides[i].style.display = "none";
-}
-slideIndex++;
-if (slideIndex > slides.length) {
-slideIndex = 1;
-}
-slides[slideIndex - 1].style.display = "block";
-setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:#7B8C3B;
+            color: #fff;
+            padding: 20px;
+            font-size: 18px;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
 
 
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-document.getElementById("home-button").style.display = "block";
-} else {
-document.getElementById("home-button").style.display = "none";
-}
-}
 
-// When the user clicks on the button, scroll to the top of the document
-document.getElementById("home-button").onclick = function() {topFunction()};
 
-function topFunction() {
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
+        /*trips*/
+        .trip-headline{ text-align: center;}
+        .trips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ color:black;
+  
 }
 
-window.addEventListener('load', function() {
-const loader = document.querySelector('.loader');
-const pageContent = document.querySelector('.page-content');
+.trip-box {
+  flex-basis: calc(50% - 1em);
+  margin-bottom: 2em;
+  text-align:center;
+  
+}
 
-// Add 'loading' class to the body element when the loader is displayed
-document.body.classList.add('loading');
+.trip-box img {
+  max-width: 100%;
+}
 
-// Remove 'loading' class and show page content after 3 seconds
-setTimeout(function() {
-loader.parentElement.removeChild(loader);
-pageContent.classList.add('show');
-document.body.classList.remove('loading');
-}, 2000);
-});
+.trip-box h2 {
+  margin: 1em 0 0.5em;
+  font-size: 1.5em;
+  color: #A6123A;
+}
 
-//if (location.protocol !== 'https:') {
-//location.replace(`https:${location.href.substring(location.protocol.length)}`);
-//}
+.trip-box p {
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+
+
+ 
+}
+
+@media (max-width: 768px) {
+  .trip-box {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+     .slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.active {
+  display: block;
+}
+     
+.bikehire {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.bikehire img {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.bikehire p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+max-width: 1200px;
+            margin: 0 auto;
+}
+.contact-us {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-us img {
+  display: inline-block;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.contact-us .social-icons {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-us .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact-us .social-icons li:last-child {
+  margin-right: 0;
+}
+
+.contact-us .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #333333;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-us .social-icons a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+footer {
+  background-color:#A6123A;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media-icons i {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .social-media-icons {
+    margin-top: 20px;
+  }
+}
+
+.review-div {
+  
+  padding: 10px;
+  max-width: 100%;           
+  text-align: center;
+
+  color: #010102;
+  
+
+
+}
+
+.review-div h3 {
+  font-size: 1.2rem;
+}
+
+.review-div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ 
+}
+
+.review-div li {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  
+}
+
+@media screen and (max-width: 480px) {
+  .review-div {
+    width: 100%;
+  }
+}
+
+#home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #005eff;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#home-button:hover {
+  background-color: #0056b3;
+}
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.page-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-content.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-content.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.loading .page-content {
+  overflow: hidden;
+}
+
+.details{
+  font-size: 15px;
+}
 
