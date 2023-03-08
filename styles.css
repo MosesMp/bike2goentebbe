@@ -1,4 +1,4 @@
-/* Responsive Styling */
+* Responsive Styling */
         * {
             box-sizing: border-box;
         }
@@ -165,6 +165,7 @@ font-size: 1rem;
   flex-basis: calc(50% - 1em);
   margin-bottom: 2em;
   text-align:center;
+  box-shadow: #333;
   
   
 }
@@ -178,6 +179,7 @@ font-size: 1rem;
 
 .trip-box img {
   max-width: 100%;
+  
 }
 
 .description{
@@ -222,10 +224,12 @@ text-align: center;
   
 }
 
-     .slideshow-container {
+     /* Default styles for slideshow container and slide images */
+.slideshow-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
+  margin-top: 20px;
 }
 
 .slide {
@@ -240,8 +244,21 @@ text-align: center;
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
+
+/* Media query for devices with a maximum width of 600 pixels */
+@media (max-width: 600px) {
+  .slideshow-container {
+    height: 200px; /* Reduce the height of the container */
+    margin-top: 10px; /* Adjust the margin for smaller devices */
+  }
+  
+  .slide img {
+    height: 200px; /* Reduce the height of the slide images */
+  }
+}
+
 
 .active {
   display: block;
@@ -287,6 +304,7 @@ max-width: 1200px;
 .contact-info .details p {
   margin-bottom: 10px;
   font-size: 16px;
+
 }
 
 .contact-info .details ul {
@@ -402,9 +420,16 @@ footer {
 }
 
 .loader img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 50%;
+  max-height: 50%;
 }
+@media screen and (max-width: 768px) {
+  .loader img {
+    max-width: 100%;
+    max-height: 100%;}
+  
+}
+
 
 .page-content {
   opacity: 0;

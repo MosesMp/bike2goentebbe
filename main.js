@@ -1,10 +1,10 @@
- // Menu toggle
- const menuToggle = document.querySelector(".menu-toggle");
- const menuItems = document.querySelector(".menu-items");
+// Menu toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const menuItems = document.querySelector(".menu-items");
 
- menuToggle.addEventListener("click", () => {
-     menuItems.classList.toggle("show");
- });
+menuToggle.addEventListener("click", () => {
+    menuItems.classList.toggle("show");
+});
 
 // Select all reserve buttons
 const reserveButtons = document.querySelectorAll('.reserve-button');
@@ -39,7 +39,7 @@ if (slideIndex > slides.length) {
 slideIndex = 1;
 }
 slides[slideIndex - 1].style.display = "block";
-setTimeout(showSlides, 5000); // Change image every 5 seconds
+setTimeout(showSlides, 2000); // Change image every 5 seconds
 }
 
 
@@ -81,4 +81,3 @@ document.body.classList.remove('loading');
 //if (location.protocol !== 'https:') {
 //location.replace(`https:${location.href.substring(location.protocol.length)}`);
 //}
-
