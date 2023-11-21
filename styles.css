@@ -1,0 +1,504 @@
+* Responsive Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
+          
+           
+            
+        }
+        
+      .logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .slogan {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:#7B8C3B;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+            font-family: 'Staatliches', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 20px;
+                color: #fff;
+                background-color: #333;
+                border: none;
+            }
+
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .menu-items.show {
+                display: flex;
+            }
+
+            .menu a {
+                display: block;
+                padding: 10px 20px;
+            }
+        }
+
+
+ /*about us*/
+ .about-section {
+text-align: justify;
+padding: 20px;
+margin: 30px auto;
+background-color:#7B8C3B ;
+color: #FFFFFF;
+
+
+}
+
+.about-section h2 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+.about-section p {
+font-size: 1.2rem;
+line-height: 1.5;
+}
+p.mobilev{
+ display: none;
+  }
+
+@media screen and (max-width: 768px) {
+.about-section {
+padding: 10px;
+}
+
+.about-section h2 {
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+
+.about-section p {
+font-size: 1rem;
+
+}
+.desktopv{
+  display: none;
+   }
+   p.mobilev{
+    display:contents;
+     }
+}
+
+  
+
+
+        /*trips*/
+        .trip-headline{ text-align: center;}
+        .trips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ color:black;
+ 
+  
+}
+
+.trip-box {
+  flex-basis: calc(50% - 1em);
+  margin-bottom: 2em;
+  text-align:center;
+  box-shadow: #333;
+  
+  
+}
+.trip-box p {
+  
+  text-align:justify;
+  
+  
+}
+
+
+.trip-box img {
+  max-width: 100%;
+  
+}
+
+.description{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.tripheadline {
+  color: #A6123A;
+  align-items: center;
+}
+.centertext {
+text-align: center;
+}
+
+.trip-box p {
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+.reserve-button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: #A6123A;
+  color: #fff;
+  cursor: pointer;
+ 
+
+ 
+}
+
+@media (max-width: 768px) {
+  .trip-box {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .trip-box img {
+    max-width: 90%;
+  }
+  
+}
+
+     /* Default styles for slideshow container and slide images */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Media query for devices with a maximum width of 600 pixels */
+@media (max-width: 600px) {
+  .slideshow-container {
+    height: 200px; /* Reduce the height of the container */
+    margin-top: 10px; /* Adjust the margin for smaller devices */
+  }
+  
+  .slide img {
+    height: 200px; /* Reduce the height of the slide images */
+  }
+}
+
+
+.active {
+  display: block;
+}
+     
+.bikehire {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+
+.bikehire img {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.bikehire p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+max-width: 1200px;
+            margin: 0 auto;
+}
+
+.contact-us {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  
+}
+
+.contact-info {
+  display: inline-block;
+  text-align: left;
+
+}
+
+.contact-info .details p {
+  margin-bottom: 10px;
+  font-size: 16px;
+
+}
+
+.contact-info .details ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.mobilex {
+  display:none;
+ }
+
+
+
+@media screen and (max-width: 768px) {
+  .contact-info {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .details {
+   display: none;
+  }
+  .mobilex {
+    display:contents;
+   }
+
+}
+
+footer {
+  background-color:#A6123A;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media-icons i {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .social-media-icons {
+    margin-top: 20px;
+  }
+}
+
+
+
+#home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #005eff;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#home-button:hover {
+  background-color: #0056b3;
+}
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  max-width: 50%;
+  max-height: 50%;
+}
+@media screen and (max-width: 768px) {
+  .loader img {
+    max-width: 100%;
+    max-height: 100%;}
+  
+}
+
+
+.page-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-content.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-content.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.loading .page-content {
+  overflow: hidden;
+}
+
+.details{
+  font-size: 15px;
+}
+
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.award {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.award img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .awards {
+   display: none;
+  }
+  
+  .award {
+  display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* Your CSS code for mobile devices goes here */
+  body {
+    font-size: 15px;
+    
+  }
+}
